@@ -1,0 +1,10 @@
+#chartdiv {
+  height: 100vh;
+  overflow: hidden;
+  background-color: #383838;
+}
+
+.form-field-destination-city {
+  float: right;
+  clear: both;
+}

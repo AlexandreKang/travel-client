@@ -1,0 +1,45 @@
+<mat-form-field>
+  <form [formGroup]="originCityForm" (ngSubmit)="getOriginCity(originCityForm)">
+    <input
+      matInput
+      type="text"
+      placeholder="Origin city"
+      formControlName="origin"
+    />
+  </form>
+  <button
+    mat-button
+    *ngIf="originCityForm.value.origin"
+    matSuffix
+    mat-icon-button
+    aria-label="Clear"
+    (click)="originCityForm.reset()"
+  >
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-form-field>
+
+<mat-form-field class="form-field-destination-city">
+  <form
+    [formGroup]="destinationCityForm"
+    (ngSubmit)="getDestinationCity(destinationCityForm)"
+  >
+    <input
+      matInput
+      type="text"
+      placeholder="Destination city"
+      formControlName="destination"
+    />
+  </form>
+  <button
+    mat-button
+    *ngIf="destinationCityForm.value.destination"
+    matSuffix
+    mat-icon-button
+    aria-label="Clear"
+    (click)="destinationCityForm.reset()"
+  >
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-form-field>
+<div id="chartdiv" style="width: 100%; height: 600px;"></div>

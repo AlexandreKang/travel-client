@@ -19,7 +19,7 @@
   </button>
 </mat-form-field>
 
-<mat-form-field class="form-field-destination-city">
+<mat-form-field class="form-field-destination-city" *ngIf="isActive">
   <form
     [formGroup]="destinationCityForm"
     (ngSubmit)="getDestinationCity(destinationCityForm)"

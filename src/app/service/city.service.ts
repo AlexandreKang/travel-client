@@ -14,4 +14,13 @@ export class CityService {
   getCity(title: string): Observable<City> {
     return this.http.get<City>(this.baseUrl + '/api/' + title);
   }
+
+  updateCity(
+    originCityId: string,
+    destinationCityId: string
+  ): Observable<City> {
+    return this.http.patch<City>(this.baseUrl + '/api/' + originCityId, {
+      destination: destinationCityId,
+    });
+  }
 }
